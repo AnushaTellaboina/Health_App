@@ -1,24 +1,27 @@
-import logo from './logo.svg';
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
+
+import Bmi from './components/Bmi/Bmi';
+import Diet from './components/Diet/Diet';
+import Entertainment from './components/Entertainment/Entertainment';
+import Header from './components/Header/Header';
+import Home from './components/Home/Home';
+import Yoga from './components/Yoga/Yoga';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header />
+      <Routes>
+        <Route exact path="/" element={<Home />} />
+        <Route exact path="/entertainment" element={<Entertainment />} />
+        <Route exact path="/diet" element={<Diet />} />
+        <Route exact path="/yoga" element={<Yoga />} />
+        <Route exact path="/bmi" element={<Bmi />} />
+      
+      </Routes>
+    </>
   );
 }
 

@@ -1,13 +1,15 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* Import external font */
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+/* Import Tailwind CSS base and components */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+
+/* Your custom CSS rules */
+
+.btn-md {
+    @apply relative inline-flex items-center justify-center m-2 overflow-hidden text-sm font-medium rounded-lg bg-gradient-to-br from-green-500 to-blue-500 text-white focus:ring-1 focus:ring-purple-200;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+/* Import Tailwind CSS utilities */
+@import 'tailwindcss/utilities';
